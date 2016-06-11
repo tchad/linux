@@ -179,6 +179,11 @@
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
+
+            roveruc0: roveruc0@5 {
+                compatible = "rover,roveruc0";
+                reg = <0x05>;
+            };
 		};
 
 		pwm: pwm@7e20c000 {

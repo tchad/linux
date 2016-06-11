@@ -812,6 +812,13 @@ config PANEL_BOOT_MESSAGE
 	  An empty message will only clear the display at driver init time. Any other
 	  printf()-formatted message is valid with newline and escape codes.
 
+config ROVER_UC0
+    depends on I2C && INPUT && INPUT_POLLDEV && INPUT_EVDEV
+    tristate "Rover UC0"
+    default "n"
+    ---help---
+     UC0 provide wheel control and distence sensor reading
+
 source "drivers/misc/c2port/Kconfig"
 source "drivers/misc/eeprom/Kconfig"
 source "drivers/misc/cb710/Kconfig"
