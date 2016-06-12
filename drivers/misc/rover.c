@@ -255,7 +255,7 @@ static int roveruc0_probe(struct i2c_client *client, const struct i2c_device_id 
 
     uc0->wheel_state.left_wheel_speed = 0;
     uc0->wheel_state.right_wheel_speed = 0;
-    uc0->wheel_state.wheel_min_speed = 0;
+    uc0->wheel_state.wheel_min_speed = -255;
     uc0->wheel_state.wheel_max_speed = 255;
     
     polled_device = input_allocate_polled_device();
